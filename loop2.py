@@ -5,8 +5,8 @@ max_heart_rate = 101
 min_heart_rate = 60
 max_glucose = 91
 min_glucose = 75
-name = input("Please enter your name: ")
-print(Fore.YELLOW + f"Hello {name}, in order to complete your registration, you need to give some medical details " + Style.RESET_ALL)
+name = input(Fore.BLUE + Style.BRIGHT + "Please enter your name: " + Style.RESET_ALL)
+print(Fore.YELLOW + f"Hello {name}, in order to complete your registration, you need to give some medical details: " + Style.RESET_ALL)
 sleep(2)
 patient_heart_rate = int(input(Fore.BLUE + Style.BRIGHT  + "Please insert your heart rate: "))
 patient_glucose = int(input("Please check your glucose level: " + Style.RESET_ALL))
@@ -23,12 +23,12 @@ else:
     print(Fore.RED + Style.BRIGHT + "Return with a medical approval that everything is fine" + Style.RESET_ALL)
 
 print("=" * 30)
-name2 = input("Please enter your name: ")
+name2 = input(Fore.BLUE + Style.BRIGHT + "Please enter your name: " + Style.RESET_ALL)
 if name2 == name:
     if "You are in good shape" == status:
-        print("Welcome to the company, lets start your ONBOARD process")
+        print(Fore.MAGENTA + Style.BRIGHT + "Welcome to the company, lets start your ONBOARD process" + Style.RESET_ALL)
     else:
-        print("Please present the medical approval you received from your doctor")
+        print(Fore.RED + Style.BRIGHT + "Please present the medical approval you received from your doctor" + Style.RESET_ALL)
 else:
-    print("Please return to first station")
+    print(Fore.RED + Style.RESET_ALL + "Patient not recognized, Please return to Medical examination" + Style.RESET_ALL)
 
